@@ -1,0 +1,4 @@
+stop_distance: 0.22  # Distance to stop line in meters
+min_segs: 2          # Minimum number of segments to detect a stop line
+off_time: 3          # Time in seconds to wait at a stop line
+max_y: 0.3           # Maximum y-coordinate value for stop line detection

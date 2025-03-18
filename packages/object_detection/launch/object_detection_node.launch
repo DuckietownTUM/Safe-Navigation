@@ -1,0 +1,14 @@
+<launch>
+    <arg name="veh" doc="Name of vehicle. ex: megaman"/>
+    <arg name="param_file_name" default="default" doc="Specify a param file. ex:megaman"/>
+    <arg name="pkg_name" value="object_detection"/>
+    <arg name="node_name" default="object_detection_node"/>
+    <arg name="AIDO_eval" default="false"/>
+
+    <group ns="$(arg veh)">
+        <node name="$(arg node_name)" pkg="$(arg pkg_name)" type="$(arg node_name).py" output="screen">
+            <rosparam command="load" file="$(find object_detection)/config/$(arg node_name)/$(arg param_file_name).yaml"/>
+            <param name="AIDO_eval" value="$(arg AIDO_eval)"/>
+        </node>
+    </group>
+</launch>

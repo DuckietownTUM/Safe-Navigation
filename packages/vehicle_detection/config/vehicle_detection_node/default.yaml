@@ -1,0 +1,7 @@
+process_frequency: 2                    # Frequency at which to process the incoming images
+circlepattern_dims: [7, 3]              # Number of dots in the pattern
+blobdetector_min_area: 10               # Minimum area for the dot pattern
+blobdetector_min_dist_between_blobs: 2  # Minimum distance between dots 
+
+
+

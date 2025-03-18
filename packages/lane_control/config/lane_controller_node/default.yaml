@@ -1,0 +1,36 @@
+#lane_control/lane_controller_node
+
+v_bar: 0.10       # The robot's normal speed.
+k_d: -7.0         # Adjusts for how far off-center the robot is.
+k_Id: -0.3        # Helps correct long-term drift off-center.
+k_Dd: -0.3        # Helps smooth out sudden changes in position.
+k_theta: -1.7     # Adjusts for the robot's angle.
+k_Iphi: -0.0      # Helps correct long-term drift in angle.
+k_Dphi: -0.0      # Helps smooth out sudden changes in angle.
+
+theta_thres: 0.523  # The angle limit before the robot corrects itself.
+d_thres: 0.2615     # The distance limit before the robot corrects itself.
+
+d_offset: 0.0       
+deriv_type: "value" 
+use_LEDs: False     
+
+omega_ff: 0
+
+integral_bounds:
+  d:
+    top: 0.3
+    bot: -0.3
+  phi:
+    top: 1.2
+    bot: -1.2
+
+  
+d_resolution: 0.011  
+phi_resolution: 0.051
+
+stop_line_slowdown:
+  start: 0.6
+  end: 0.15
+
+verbose: 0
