@@ -31,10 +31,16 @@ The project is organized into several main directories:
 - ***visualization_tools***: Provides tools for visualizing various aspects of the project
 
 ## How to build and run the project on a Duckiebot:
+
+1. **Replace all occurrences of "duckmobile" in the code with the name of your robot**
+
+2. Run
 ```
 dts devel build -f -H <ROBOT_NAME>
 dts devel run -H <ROBOT_NAME>
 ```
+
+**Object detection does not work currently!**
 
 ## Additional Information
 For a detailed report on the project, including the implementation of key functionalities such as lane following, intersection navigation, and object detection, please refer to the `Final_Report.pdf` file in the repository.
